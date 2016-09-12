@@ -1,0 +1,1 @@
+[LexToken(SCONST,' asdf \\ ',1,0), LexToken(OD,'od',7,36), LexToken(ICONST,22,8,39), LexToken(DO,'do',9,42)]

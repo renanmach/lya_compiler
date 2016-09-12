@@ -1,0 +1,4 @@
+syn a = 42; // "int"
+syn b = 'b'; // "char"
+syn c = "hello"; // "string"
+syn d = true; // "bool"

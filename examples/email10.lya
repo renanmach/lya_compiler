@@ -1,0 +1,67 @@
+dcl a array[1:10, 1:5] int;
+dcl i, j int;
+do
+  for i=1 to 10;
+    do
+      for j=1 to 5;
+    a[i,j]=i*j;
+    /* also, it is possible: a[i][j] = i*j; */
+    od;
+od;
+
+
+
+/*
+'''
+Scope level for Program : 0
+  variables & their offsets
+  a : 0
+  i : 50
+  j : 51
+'''
+[
+  ('stp'),
+  ('alc', 52),
+  ('ldc', 1),
+  ('stv', 0, 50),
+  ('lbl', 1),
+  ('ldc', 1),
+  ('stv', 0, 51),
+  ('lbl', 3),
+  ('ldr', 0, 0),
+  ('ldv', 0, 50),
+  ('ldc', 1),
+  ('sub'),
+  ('idx', 10),
+  ('ldv', 0, 51),
+  ('ldc', 1),
+  ('sub'),
+  ('idx', 1),
+  ('ldv', 0, 50),
+  ('ldv', 0, 51),
+  ('mul'),
+  ('smv', 1),
+  ('ldv', 0, 51),
+  ('ldc', 1),
+  ('add'),
+  ('stv', 0, 51),
+  ('ldv', 0, 51),
+  ('ldc', 5),
+  ('leq'),
+  ('jof', 4),
+  ('jmp', 3),
+  ('lbl', 4),
+  ('ldv', 0, 50),
+  ('ldc', 1),
+  ('add'),
+  ('stv', 0, 50),
+  ('ldv', 0, 50),
+  ('ldc', 10),
+  ('leq'),
+  ('jof', 2),
+  ('jmp', 1),
+  ('lbl', 2),
+  ('dlc', 52),
+  ('end'),
+]
+*/

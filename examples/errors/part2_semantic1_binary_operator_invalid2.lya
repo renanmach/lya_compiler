@@ -1,0 +1,4 @@
+dcl a int = 2; // Ok
+dcl b char = 'h'; // Ok
+dcl c int = a+3; // Ok
+dcl d int = a+b; // Error. int + char

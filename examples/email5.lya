@@ -1,0 +1,51 @@
+dcl i int;
+dcl soma int = 0, b bool = true;
+
+do for i=1 to 10 while b;
+    soma += i;
+    if soma > 100 then
+        b = false;
+    fi;
+od;
+print (soma); 
+
+/*
+[
+  ('stp'),
+  ('alc', 3),
+  ('ldc', 0),
+  ('stv', 0, 1),
+  ('ldc', true),
+  ('stv', 0, 2),
+  ('ldc', 1),
+  ('stv', 0, 0),
+  ('lbl', 1),
+  ('ldv', 0, 2),
+  ('jof', 2),
+  ('ldv', 0, 1),
+  ('ldv', 0, 0),
+  ('add'),
+  ('stv', 0, 1),
+  ('ldv', 0, 1),
+  ('ldc', 100),
+  ('grt'),
+  ('jof', 3),
+  ('ldc', false),
+  ('stv', 0, 2),
+  ('lbl', 3),
+  ('ldv', 0, 0),
+  ('ldc', 1),
+  ('add'),
+  ('stv', 0, 0),
+  ('ldv', 0, 0),
+  ('ldc', 10),
+  ('leq'),
+  ('jof', 2),
+  ('jmp', 1),
+  ('lbl', 2),
+  ('ldv', 0, 1),
+  ('prv'),
+  ('dlc', 3),
+  ('end'),
+]
+*/

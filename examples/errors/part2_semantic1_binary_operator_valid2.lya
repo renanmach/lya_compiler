@@ -1,0 +1,3 @@
+dcl booltest bool = (((true == false)));
+dcl inttest int = 12 + 15;
+//dcl strtest CHARS[123] = "huehuehue" + "br";

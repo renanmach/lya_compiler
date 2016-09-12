@@ -1,0 +1,31 @@
+dcl m int = 2, n int = 3;
+p: proc (x int);
+  dcl s int;
+  s = m * x;
+end;
+p(n);
+
+/*
+[
+  ('stp'),
+  ('alc', 2),
+  ('ldc', 2),
+  ('stv', 0, 0),
+  ('ldc', 3),
+  ('stv', 0, 1),
+  ('jmp', 2),
+  ('lbl', 1),
+  ('enf', 1),
+  ('alc', 1),
+  ('ldv', 0, 0),
+  ('ldv', 1, -2),
+  ('mul'),
+  ('stv', 1, 0),
+  ('ret', 1, 1),
+  ('lbl', 2),
+  ('ldv', 0, 1),
+  ('cfu', 1),
+  ('dlc', 2),
+  ('end'),
+]
+*/

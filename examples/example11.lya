@@ -1,0 +1,21 @@
+/* Display all prime numbers between two given interval: */
+
+dcl n1, n2, i, j int, flag bool;
+
+print("Enter 2 numbers (intevals) separated by space: ");
+read(n1, n2);
+print("Prime numbers between ", n1, " and ", n2, " are:\n");
+do
+  for i = n1 to n2;
+    flag = false;
+    loop: do
+      for j = 2 to i/2;
+        if i % j == 0 then
+          flag = true;
+          exit loop;
+        fi;
+    od;
+    if flag then
+      print(i, "  ");
+    fi;
+od;

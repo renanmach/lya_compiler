@@ -1,0 +1,2 @@
+dcl a int;
+a = "ae"; //não ok

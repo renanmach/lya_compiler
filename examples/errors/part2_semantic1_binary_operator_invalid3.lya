@@ -1,0 +1,1 @@
+dcl a string = "aaa" * "bbb";

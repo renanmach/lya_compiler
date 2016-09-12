@@ -1,0 +1,7 @@
+dcl m int = 2, n int = 3;
+p: proc ();
+  dcl s int;
+  dcl x int = 3;
+  s = m * x;
+end;
+p(n);

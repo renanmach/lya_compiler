@@ -1,0 +1,76 @@
+dcl i,j int, r ref int;
+
+p: proc(x int, y ref int) returns (int);
+  dcl b bool;
+  read(b);
+  if b then
+     y = -> i;
+     result y->;
+  else
+     y = r;
+     result r->;
+  fi;
+end;
+
+read(i);
+r = -> i;
+print(p(i,->j));
+
+/*
+[
+  ('stp'),
+  ('alc', 3),
+  ('jmp', 3),
+  ('lbl', 1),
+  ('enf', 1),
+  ('alc', 1),
+  ('rdv'),
+  ('stv', 1, 0),
+  ('ldv', 1, 0),
+  ('jof', 4),
+  ('ldr', 0, 0),
+  ('stv', 1, -4),
+  ('lrv', 1, -4),
+  ('stv', 1, -5),
+  ('jmp', 5),
+  ('lbl', 4),
+  ('ldv', 0, 2),
+  ('stv', 1, -4),
+  ('lrv', 0, 2),
+  ('stv', 1, -5),
+  ('lbl', 5),
+  ('lbl', 2),
+  ('dlc', 1),
+  ('ret', 1, 2),
+  ('lbl', 3),
+  ('rdv'),
+  ('stv', 0, 0),
+  ('ldr', 0, 0),
+  ('stv', 0, 2),
+  ('alc', 1),
+  ('ldr', 0, 1),
+  ('ldv', 0, 0),
+  ('cfu', 1),
+  ('prv'),
+  ('dlc', 3),
+  ('end'),
+]
+
+
+'''
+Scope level for ProcStmt p: 1
+  formal parameters & their offsets
+  x : -3
+  _ret : -5
+  y : -4
+  variables & their offsets
+  b : 0
+ Scope level for Program : 0
+  variables & their offsets
+  r : 2
+  i : 0
+  j : 1
+  functions, return types & labels
+  p : int, labels start=1, end=3
+'''
+*/

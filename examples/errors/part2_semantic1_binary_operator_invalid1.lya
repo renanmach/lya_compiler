@@ -1,0 +1,2 @@
+dcl a int = 2; // Ok
+dcl b char = 3; // Error. 3 is not char

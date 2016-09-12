@@ -1,0 +1,41 @@
+dcl i int, b bool = true;
+x:
+  do while b;
+        read (i);
+        if i <= 0 then
+            exit x;
+        fi;
+        print (i*i);
+  od;
+print (0); 
+
+/*
+[
+  ('stp'),
+  ('alc', 2),
+  ('ldc', true),
+  ('stv', 0, 1),
+  ('lbl', 2),
+  ('ldv', 0, 1),
+  ('jof', 3),
+  ('rdv'),
+  ('stv', 0, 0),
+  ('ldv', 0, 0),
+  ('ldc', 0),
+  ('leq'),
+  ('jof', 4),
+  ('jmp', 1),
+  ('lbl', 4),
+  ('ldv', 0, 0),
+  ('ldv', 0, 0),
+  ('mul'),
+  ('prv'),
+  ('jmp', 2),
+  ('lbl', 3),
+  ('lbl', 1),
+  ('ldc', 0),
+  ('prv'),
+  ('dlc', 2),
+  ('end'),
+]
+*/

@@ -1,0 +1,2 @@
+dcl a int;
+a = 3;   // Error. ’a’ is not defined.

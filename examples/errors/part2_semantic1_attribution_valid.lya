@@ -1,0 +1,2 @@
+dcl a int;
+a = 2; //OK

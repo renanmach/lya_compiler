@@ -1,0 +1,27 @@
+dcl v array[1:100] int;
+dcl n, c, d, swap  int;
+
+print("Enter number of elements: ");
+read(n);
+print("Enter ", n, " integers\n");
+do
+  for c = 1 to n;
+    read(v[c]);
+od;
+do
+  for c = 1 to n-1;
+    do
+      for d = 1 to n-c-1;
+        // For decreasing order use "<"    
+        if v[d] > v[d+1] then
+          swap   = v[d];
+          v[d]   = v[d+1];
+          v[d+1] = swap;
+        fi;
+    od;
+od;
+print("Sorted list in ascending order:\n");
+do
+  for c = 1 to n;
+    print(v[c], " ");
+od;

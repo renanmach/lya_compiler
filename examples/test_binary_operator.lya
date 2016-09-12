@@ -1,0 +1,9 @@
+ dcl a int = 2; // Ok
+ //dcl b char = 3; // Error. 3 is not char
+ dcl c int = a+3; // Ok
+ dcl c2 int = 3+a; // Ok
+ //dcl d int = a+b; // Error. int + char
+ dcl e bool = true; // Ok
+
+dcl a chars[10] = "Hello" + "World"; // Ok
+dcl b chars[10] = "Hello" * "World"; // Error (unsupported op *)

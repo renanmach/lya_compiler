@@ -1,0 +1,2 @@
+dcl m int = 2, n int = 3;
+m = m*n+m-n+m*3;
